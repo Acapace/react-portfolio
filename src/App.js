@@ -236,7 +236,7 @@ const App = () => {
               <Card.Body>
                 <Card.Title>A.Auto Events App</Card.Title>
                 <Card.Text>
-                  React | Django | Python | Bootstrap | Sass
+                  <p>React | Django | Python | Bootstrap | Sass</p>
                   <p>Solo Project</p>
                   <p>I created this app for car enthusiasts. A blog that will alow the user to express their experience of the attended Auto Show.</p>
                 </Card.Text>
