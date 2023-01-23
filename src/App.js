@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './App.css';
-// import Fontawesome from './components/Fontawesome.js'
-// import axios from 'axios'
-
 //--------------------------------------------------------------------\\
-//fontawesome imports
-
 import { render } from 'react-dom';
 import { faGraduationCap, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
@@ -13,10 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //--------------------------------------------------------------------\\
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
 //--------------------------------------------------------------------\\
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -24,38 +16,30 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Modal from 'react-bootstrap/Modal';
-// import Box from 'react-bootstrap/Box';
-
-
 //--------------------------------------------------------------------\\
-
-
-
 
 
 const App = () => {
 
-  //========= Hooks ==========================
+  //-----HOOKS-----\\
   const [showModal, setShowModal] = useState(false);
 
-  //============================================
-  //Modal
+  //-----MODAL-----\\
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
-  //========= UseEffect ===================
+
   useEffect(() => {
 
   }, [])
-
 
   return (
     <>
 
       <div id="home"></div>
+
       {/* TOP NAVBAR */}
       <Navbar bg="light" expand="lg" sticky="top">
         <Container>
@@ -113,14 +97,21 @@ const App = () => {
       </h5>
 
 
-
-
-      {/* RESUME/TIMELINE */}
+      {/* RESUME */}
 
       <div id="resume"></div>
       <br></br>
       <br></br>
       <h3 style={{ textAlign: 'center', fontWeight: 'bold', textDecorationLine: 'underline' }}>Resume</h3><br />
+      <h5 style={{ textAlign: "center" }}>
+        <p>
+          <p> Technical Skills: JavaScript, Python 3 | JQuery, React.js, Ejs | Express.js, Node.js, Django Rest Framework | SQL, MongoDB , HTML | CSS, Bootstrap, Tailwind, Material, Sass | Rest APIs | Git | Netlify, Heroku | Microsoft Office Suite | Claimen Quick Books | EZpay | LexisNexis | Epic software system | Picture Genetics </p>
+          <p>_________________________________________________________________________________________</p>
+        </p>
+      </h5>
+
+
+      {/* TIME LINE */}
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -221,7 +212,6 @@ const App = () => {
       <br></br>
       <br></br>
       <h3 style={{ textAlign: 'center', fontWeight: 'bold', textDecorationLine: 'underline' }}>My Projects</h3><br />
-      <br></br>
       <br></br>
 
 
@@ -400,16 +390,6 @@ const App = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-
-
-
-
-
-
-      {/* FOOTER */}
-
-
-
 
     </>
   )
